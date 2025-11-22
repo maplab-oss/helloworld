@@ -8,7 +8,7 @@ export default [
   eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ["**/dist/**", "**/.next/**"],
+    ignores: ["**/dist/**", "**/.next/**", "etc/**"],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
