@@ -12,6 +12,6 @@ Build end to end typescript apps with:
 - zod
 - Vitest
 - tRPC
-- shadcn/ui (wip 🚧)
+- shadcn/ui
 - Clerk (wip 🚧)
 - BullMQ (wip 🚧)
