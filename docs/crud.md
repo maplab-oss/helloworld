@@ -5,12 +5,19 @@ The goal is to define our model's fields once and derive every CRUD shape from t
 ```ts
 // basicFields.ts
 
-const basicFields = z.object({
+export const basicFields = z.object({
   _id: z.string().default(() => crypto.randomUUID()),
   createdAt: z.date().default(() => new Date()),
   updatedAt: z.date().default(() => new Date()),
   deletedAt: z.date().nullable().default(null),
-})
+});
+
+export const createBasicFields = () => ({
+  _id: crypto.randomUUID(),
+  createdAt: new Date(),
+  updatedAt: new Date(),
+  deletedAt: null,
+});
 ```
 
 ```ts
@@ -38,16 +45,9 @@ export type BookUpdate = z.input<typeof bookUpdateSchema>;
 export type BookRead = z.infer<typeof bookReadSchema>;
 
 export const createBook = (data: BookCreate): BookBase => {
-  const base = bookCreateSchema.parse(data);
-
-  const record = {
-    ...base,
-    _id: crypto.randomUUID(),
-    createdAt: new Date(),
-    updatedAt: new Date(),
-    deletedAt: null,
-  };
-
-  return bookBaseSchema.parse(record);
+  return bookBaseSchema.parse({
+    ...bookCreateSchema.parse(data),
+    ...createBasicFields(),
+  });
 };
 ```
