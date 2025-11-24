@@ -15,6 +15,7 @@ Build end to end typescript apps with:
 - shadcn/ui
 - Clerk (wip 🚧)
 - BullMQ (wip 🚧)
+- superjson (wip 🚧)
 
 ## Todo
 
