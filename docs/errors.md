@@ -1,6 +1,6 @@
 # Errors
 
-We use centralized error handling to prevent accidentally leaking implementation details to the frontend.
+We use centralized error handling to prevent accidentally leaking implementation details to the client.
 
 ## How it works
 
@@ -26,7 +26,7 @@ throw new InsufficientPermissionsError();
 
 ## When to create a new error type
 
-Create a new error class when the client needs to handle that case specifically. Each class = a new error code = something the frontend can branch on.
+Create a new error class when the client needs to handle that case specifically. Each class represents a new error code and something the client can switch on.
 
 If the client just shows a toast regardless of the error type, use an existing generic error. Don't create new types for every failure mode.
 
