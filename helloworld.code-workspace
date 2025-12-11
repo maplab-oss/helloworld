@@ -20,5 +20,18 @@
       "name": "local",
       "path": "."
     }
-  ]
+  ],
+  "settings": {
+    "[typescript]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "always"
+    }
+  }
 }
