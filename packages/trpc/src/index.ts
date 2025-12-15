@@ -1,1 +1,1 @@
-export { appRouter, type AppRouter } from "./trpc";
+export type { AppRouter } from "./trpc";
