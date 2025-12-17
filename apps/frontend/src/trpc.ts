@@ -1,4 +1,5 @@
 import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
+import superjson from "superjson";
 import type { AppRouter } from "@maplab-oss/helloworld-trpc";
 import { apiBaseUrl } from "./config";
 
@@ -8,6 +9,7 @@ export const trpc = createTRPCProxyClient<AppRouter>({
   links: [
     httpBatchLink({
       url: `${baseUrl}/trpc`,
+      transformer: superjson,
     }),
   ],
 });
