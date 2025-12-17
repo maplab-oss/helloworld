@@ -17,6 +17,7 @@
   "scripts": {
     "dev": "tsc --watch --project tsconfig.json",
     "build": "tsc --project tsconfig.json",
+    "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
   },

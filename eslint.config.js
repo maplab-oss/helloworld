@@ -5,10 +5,24 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 
 export default [
+  {
+    ignores: [
+      "**/dist/**",
+      "**/.next/**",
+      "**/node_modules/**",
+      "**/.turbo/**",
+      "**/.git/**",
+      "etc/**",
+      "**/vitest.config.ts",
+      "**/vite.config.ts",
+      "**/next.config.ts",
+      "**/postcss.config.mjs",
+      "eslint.config.js",
+    ],
+  },
   eslintJs.configs.recommended,
   ...tseslint.configs.recommended,
   {
-    ignores: ["**/dist/**", "**/.next/**", "etc/**"],
     files: ["**/*.ts", "**/*.tsx"],
     languageOptions: {
       parserOptions: {
