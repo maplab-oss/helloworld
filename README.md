@@ -10,12 +10,12 @@ Build end to end typescript apps with:
 - eslint
 - zapper
 - zod
+- superjson
 - Vitest
 - tRPC
 - shadcn/ui
-- Clerk (wip 🚧)
-- BullMQ (wip 🚧)
-- superjson (wip 🚧)
+- Clerk (extension)
+- BullMQ (extension)
 
 ## Todo
 
