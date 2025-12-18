@@ -5,7 +5,7 @@ projects:
   - name: staging
     services:
     - type: web
-      name: helloworld-backend
+      name: backend
       runtime: node
       repo: https://github.com/maplab-oss/node-monorepo-template
       plan: free
@@ -33,7 +33,7 @@ projects:
         - package.json
         - pnpm-lock.yaml
     - type: web
-      name: helloworld-frontend
+      name: frontend
       env: static
       repo: https://github.com/maplab-oss/node-monorepo-template
       envVars:
