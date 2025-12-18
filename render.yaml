@@ -12,7 +12,7 @@ projects:
       envVars:
       - key: APP_ENV
         value: production
-      - key: PORT
+      - key: BACKEND_PORT
         value: 5471
       - key: FRONTEND_URL
         sync: false
