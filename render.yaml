@@ -14,8 +14,11 @@ projects:
         value: production
       - key: BACKEND_PORT
         value: 5471
-      - key: FRONTEND_URL
-        sync: false
+      - key: FRONTEND_HOST
+        fromService:
+          name: frontend
+          type: web
+          property: host
       - key: MONGO_CONNECTION_STRING
         sync: false
       region: singapore
