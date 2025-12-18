@@ -12,6 +12,8 @@ projects:
       envVars:
       - key: APP_ENV
         value: production
+      - key: FRONTEND_URL
+        sync: false
       - key: MONGO_CONNECTION_STRING
         sync: false
       region: singapore
