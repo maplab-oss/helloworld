@@ -8,8 +8,19 @@ const app = Fastify({
   trustProxy: true,
 });
 
+// CORS configuration for template deployments:
+// In prod, allow Render domains + custom domains (via FRONTEND_URL)
+// In dev, allow all origins
+const allowedOrigins = isProd
+  ? [
+      /\.onrender\.com$/,
+      /\.vercel\.app$/,
+      ...(process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : []),
+    ]
+  : true;
+
 await app.register(cors, {
-  origin: true, // TODO: Restrict to frontendOrigin once FRONTEND_URL is set
+  origin: allowedOrigins,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 });
