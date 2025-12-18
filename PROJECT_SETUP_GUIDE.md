@@ -6,6 +6,7 @@ This is a template project that needs to be customized for a new project. Before
 - **Project name**: The name of the new project (kebab-case for files/folders, PascalCase for display)
 - **Project description**: A one-liner explaining what the project does
 - **Repo URL**: Or something like someaccount/somerepo
+- **Emoji**: For favicon and readme heading
 
 If this information is not in context, **ask the user for it before proceeding**.
 
@@ -30,16 +31,11 @@ Complete these tasks to transform the template into the new project:
    - Update all references in config files
 
 4. **Rewrite README.md**
-   - Add project title and description
-   - Document the project's purpose and features
-   - Include setup and development instructions
-   - Keep it concise but informative
+   - Rewrite it to just contain the project description
+   - The heading would be the project name and emoji
 
-5. **Write AGENTS.md**
-   - Document project architecture and structure
-   - Include coding patterns and conventions
-   - Add context that will help AI agents work on this project
-   - Reference any special considerations or gotchas
+5. **Update AGENTS.md**
+Just replace any helloworld project description with the real description.
 
 6. **Assign random ports**
 For each app, assign a random port so that it doesn't clash with other projects. Make sure to find and replace across the whole repo.
@@ -49,14 +45,12 @@ For each app, assign a random port so that it doesn't clash with other projects.
    - Set all the repo URLs to the new repo
 
 7. **Update branding**
-   - Replace favicon in `apps/frontend/public/`
    - Update page title in `apps/frontend/index.html`
-   - Ensure branding matches the project identity
+   - Create a base64 encoded favicon as well, see `etc/bin/emoji-favicon`
 
 8. **Clean up**
    - Delete this PROJECT_SETUP_GUIDE.md file
    - Remove any other template artifacts
    - Verify the project is ready for development
-
 
 **After completing this checklist, the project should be fully customized and ready for development.**
