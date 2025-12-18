@@ -51,6 +51,6 @@ export const RATE_LIMIT_WINDOW_MS = 60000;
 
 Config belongs in `config/` if it's conceptually global to the package/app. Keep local, non-global config near the code that uses it.
 
-## Shared Config
+## System Package
 
-Config shared across multiple apps/packages goes in `packages/config`. It follows the same conventions: `env.ts` for environment variables, separate files for domain config and constants.
+Code shared across the entire system goes in `packages/system`. This includes global-level config (environment variables, constants), shared utility functions, and common API helpers. It follows the same conventions: `env.ts` for environment variables, separate files for domain config and constants.

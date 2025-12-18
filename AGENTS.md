@@ -15,7 +15,8 @@ zap restart someservice
 
 ## Documentation
 
-Be sure to read relevant documents before making changes:
+Read these before making changes:
+
 - **[style-guide.md](docs/style-guide.md)** - For significant code changes
 - **[config.md](docs/config.md)** - For configuration and environment variable patterns
 - **[zapper-usage.md](docs/zapper-usage.md)** - For running servers, restarting, viewing logs

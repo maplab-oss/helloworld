@@ -352,9 +352,16 @@ if (!isProd) {
 etc/bin/randomport  # e.g., 8949
 ```
 
-**Add to `.env`:**
+**Add to `.env.base`:**
 ```bash
 BULLBOARD_PORT=8949
+```
+
+**Create `docs/bull.md`** with the Bull Board URL:
+```markdown
+# Bull Board
+
+Queue monitoring UI (development only): http://localhost:8949
 ```
 
 **Update `zap.yaml`:**

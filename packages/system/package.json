@@ -1,5 +1,5 @@
 {
-  "name": "@maplab-oss/helloworld-config",
+  "name": "@maplab-oss/helloworld-system",
   "version": "0.0.1",
   "type": "module",
   "main": "./src/index.ts",

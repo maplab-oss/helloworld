@@ -22,7 +22,7 @@
     "test:watch": "vitest"
   },
   "dependencies": {
-    "@maplab-oss/helloworld-config": "workspace:*",
+    "@maplab-oss/helloworld-system": "workspace:*",
     "@trpc/server": "^11.7.1",
     "superjson": "^2.2.6"
   }

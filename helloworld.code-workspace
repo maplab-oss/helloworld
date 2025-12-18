@@ -10,7 +10,7 @@
     },
     {
       "name": "config",
-      "path": "./packages/config"
+      "path": "./packages/system"
     },
     {
       "name": "trpc",
