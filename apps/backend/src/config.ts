@@ -3,10 +3,8 @@ export const isProd = env === "production";
 export const isDev = env === "development";
 export const port = parseInt(process.env.PORT ?? process.env.BACKEND_PORT ?? "3000", 10);
 
-const frontendHost = process.env.FRONTEND_HOST;
+// Set FRONTEND_URL manually in Render dashboard after first deploy to restrict CORS
+// Format: https://your-frontend-service.onrender.com (or custom domain)
 const frontendUrl = process.env.FRONTEND_URL;
 
-export const frontendOrigin =
-  frontendUrl ||
-  (frontendHost && `https://${frontendHost}.onrender.com`) ||
-  "";
+export const frontendOrigin = frontendUrl || "";

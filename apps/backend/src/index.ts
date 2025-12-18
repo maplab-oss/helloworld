@@ -1,7 +1,7 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import { fastifyTRPCPlugin } from "@trpc/server/adapters/fastify";
-import { isProd, port, frontendOrigin } from "./config";
+import { isProd, port } from "./config";
 import { appRouter } from "@maplab-oss/helloworld-trpc/server";
 
 const app = Fastify({
@@ -9,7 +9,7 @@ const app = Fastify({
 });
 
 await app.register(cors, {
-  origin: isProd && frontendOrigin ? [frontendOrigin] : true,
+  origin: true, // TODO: Restrict to frontendOrigin once FRONTEND_URL is set
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 });

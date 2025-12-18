@@ -14,11 +14,6 @@ projects:
         value: production
       - key: MONGO_CONNECTION_STRING
         sync: false
-      - key: FRONTEND_HOST
-        fromService:
-          name: frontend
-          type: web
-          property: host
       region: singapore
       buildCommand: corepack enable && pnpm install && pnpm turbo run build --filter=@maplab-oss/helloworld-backend
       startCommand: pnpm --filter=@maplab-oss/helloworld-backend start
