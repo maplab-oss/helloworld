@@ -9,7 +9,7 @@ const app = Fastify({
 });
 
 await app.register(cors, {
-  origin: isProd ? [frontendOrigin] : true,
+  origin: isProd && frontendOrigin ? [frontendOrigin] : true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
 });

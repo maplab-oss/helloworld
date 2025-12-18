@@ -12,5 +12,6 @@ export const frontendOrigin =
   "";
 
 if (isProd && !frontendOrigin) {
-  throw new Error("FRONTEND_URL or FRONTEND_HOST must be set in production");
+  console.warn("⚠️  WARNING: FRONTEND_URL or FRONTEND_HOST not set. CORS will allow all origins.");
+  console.warn("⚠️  This should only happen on first deploy. Set FRONTEND_URL in production!");
 }
