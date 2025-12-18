@@ -1,5 +1,5 @@
 {
-  "name": "@maplab-oss/helloworld-frontend-vite",
+  "name": "@maplab-oss/helloworld-frontend",
   "private": true,
   "version": "0.0.1",
   "type": "module",

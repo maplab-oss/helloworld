@@ -1,8 +1,8 @@
 version: "1"
 projects:
-- name: HelloWorld
+- name: helloworld
   environments:
-  - name: Production
+  - name: staging
     services:
     - type: web
       name: backend
@@ -11,9 +11,9 @@ projects:
       plan: free
       envVars:
       - key: APP_ENV
-        sync: false
+        value: production
       - key: BACKEND_PORT
-        sync: false
+        value: 2028
       - key: MONGO_CONNECTION_STRING
         sync: false
       region: singapore
@@ -32,9 +32,12 @@ projects:
       env: static
       repo: https://github.com/maplab-oss/node-monorepo-template
       envVars:
-      - key: VITE_API_BASE_URL
-        sync: false
-      buildCommand: corepack enable && pnpm install && pnpm turbo run build --filter=@maplab-oss/helloworld-frontend-vite
+      - key: VITE_BACKEND_HOST
+        fromService:
+          name: backend
+          type: web
+          property: host
+      buildCommand: corepack enable && pnpm install && pnpm turbo run build --filter=@maplab-oss/helloworld-frontend
       staticPublishPath: apps/frontend/dist
       routes:
       - type: rewrite

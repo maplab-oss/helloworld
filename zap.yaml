@@ -8,7 +8,7 @@ bare_metal:
       - APP_ENV
       - BACKEND_PORT
   frontend:
-    cmd: pnpm --filter=@maplab-oss/helloworld-frontend-vite dev
+    cmd: pnpm --filter=@maplab-oss/helloworld-frontend dev
     env:
       - APP_ENV
       - FRONTEND_VITE_PORT
@@ -19,4 +19,4 @@ tasks:
       - pnpm eslint . --fix
       - pnpm turbo run typecheck
       - pnpm turbo run build --filter=@maplab-oss/helloworld-backend
-      - pnpm turbo run build --filter=@maplab-oss/helloworld-frontend-vite
+      - pnpm turbo run build --filter=@maplab-oss/helloworld-frontend
