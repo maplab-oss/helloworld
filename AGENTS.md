@@ -34,4 +34,4 @@ IMPORTANT: `.env.base` is committed to git and its OK for agents to view and edi
 
 ## Validation
 
-For small changes, run `zap t checks` to run linting and typechecking. For bigger system level changes run that and also `zap t build` to check that all the builds still succeed.
+For small changes, run `zap t check` to run linting and typechecking. For bigger system level changes run that and also `zap t build` to check that all the builds still succeed.
