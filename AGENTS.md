@@ -25,6 +25,7 @@ Read these before making changes:
 - **[services.md](docs/services.md)** - For adding/removing services, frontends, databases, or updating infrastructure configuration
 - **[modular-monolith.md](docs/modular-monolith.md)** - For how to correctly set up tRPC slices
 - **[trpc.md](docs/trpc.md)** - For doing frontend queries/mutations
+- **[event-schema.md](docs/event-schema.md)** - For creating any kind of events: errors, logs, real time events follow this
 
 ## Agent Responsibility
 
