@@ -1,6 +1,6 @@
 project: helloworld
 env_files: [.env.base]
-bare_metal:
+native:
   backend:
     aliases: [be, b]
     cmd: pnpm --filter=@maplab-oss/helloworld-backend dev
